@@ -16,9 +16,14 @@ const form_control = input.parentElement;
 form_control.className = 'from-control success';
 }
 
-function isValidEmail(email){
+function checkEmail(input){
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(email).toLowerCase());
+   // return re.test(String(email).toLowerCase());
+   if (re.test(input.value.trim())){
+       showSuccess(input);
+   } else {
+       showError(input, `Please provide a valid email address`);
+   }
 }
 
 function getFieldId(input) {
@@ -39,7 +44,28 @@ function checkRequired(inputArray){
      });
 }
 
+function checkLength(input,min,max){
+    if(input.value.length < min){
+        showError(input,`${getFieldId(input)} needs to be at least ${min} characters `);
+    } else if (input.value.length > max ){
+        showError(input,`${getFieldId(input)} needs to be less than ${max} characters`);
+    } else {
+        showSuccess(input);
+    }
+}
+
+function confirmPassword(input1 , input2){
+          if(input1.value !== input2.value){
+            showError(input2,"PASSWORD DONT MATCH");
+          }
+          
+}
+
 form.addEventListener('submit', function(e) {
     e.preventDefault();
-     checkRequired([username,email,password,password2])
+     checkRequired([username,email,password,password2]);
+     checkLength(username,3,10);
+     checkLength(password,6,30);
+     checkEmail(email);
+     confirmPassword(password,password2);
 }) 
