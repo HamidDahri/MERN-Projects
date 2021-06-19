@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Seat selector</title>
+</head>
+<body>
+    <div class="select_container" id= "theater_container">
+        <label for="">Select your Movie: </label>
+        <select name="movie" id="movie">
+            <option value="20">Top Gun 2</option>
+            <option value="7">Jumanji</option>
+            <option value="10">Avengers</option>
+            <option value="10">Iron man</option>
+            <option value="5">Braveheart</option>
+        </select>
+    </div>
+  <!-- This is the legend displaying available , selected and occupied seat formating -->
+    <ul class="legend">
+        <!--available seats --> 
+        <li>
+            <div class="seat"></div>
+            <small>available</small>
+        </li>
+
+         <!--Selected seats --> 
+         <li>
+            <div class="seat selected"></div>
+            <small>selected</small>
+        </li>
+
+         <!--Ocupied seats --> 
+         <li>
+            <div class="occupied selected"></div>
+            <small>occupied</small>
+        </li>
+    </ul>
+
+        <!--Container for screen displaying screen and seating chart -->
+        <div class="container">
+            <div class="screen"></div>
+             <!--This is row 1 --> 
+            <div class="row">
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+            </div>
+             <!--This is row 2 --> 
+             <div class="row">
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+            </div>
+             <!--This is row 3 --> 
+             <div class="row">
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+            </div>
+             <!--This is row 4 --> 
+             <div class="row">
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+            </div>
+             <!--This is row 5 --> 
+             <div class="row">
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+            </div>
+             <!--This is row 6 --> 
+             <div class="row">
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+            </div>
+        </div> 
+
+     <!-- Totals Seats and price -->
+     <p class="totals">You have Selected <span id="count">0</span> Seats. Your Total bill is $<span id="total">0</span></p>
+    <script src="script.js"></script>
+</body>
+</html>
