@@ -25,3 +25,83 @@ h2 {
     text-align: center;
     margin-bottom: 20px ;
 }
+
+.form {
+    padding: 30px 40px;
+}
+
+.from-control {
+    margin-bottom: 8px ;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.from-control label {
+    color: gray;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.from-control input {
+    border: 2px solid indianred;
+    border-radius: 4px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 11px;
+}
+
+.from-control input:focus {
+    outline: 0;
+    border-color: lightgray;
+}
+
+.from-control.success input {
+    border-color: limegreen;
+}
+
+.from-control.error input {
+    border-color: orangered;
+}
+
+.from-control small {
+    color: orangered;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+.from-control.error small{
+   visibility: visible;
+}
+
+.form button {
+    cursor: pointer;
+    background-color: darkolivegreen;
+    border: 2px solid darkolivegreen;
+    border-radius: 5px;
+    color: whitesmoke;
+    display: block;
+    font-size: 15px;
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+button.home {
+    cursor: pointer;
+    background-color: dimgray;
+    border: 2px solid dimgray;
+    border-radius: 5px;
+    color: whitesmoke;
+    display: block;
+    font-size: 15px;
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+a {
+ text-decoration: none;
+}
