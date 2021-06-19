@@ -16,6 +16,11 @@ const form_control = input.parentElement;
 form_control.className = 'from-control success';
 }
 
+function isValidEmail(email){
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
+
 
 form.addEventListener('submit', function(e) {
     e.preventDefault();
@@ -28,7 +33,10 @@ form.addEventListener('submit', function(e) {
 
     if(email.value === ''){
         showError(email, "Email Required");
-    } else {
+    } else if (!isValidEmail(email.value)) {
+              showError(email,'Invalid Email')
+    }
+    else {
         showSuccess(email);
     }
 
