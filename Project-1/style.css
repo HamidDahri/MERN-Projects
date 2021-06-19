@@ -43,12 +43,14 @@ h2 {
 }
 
 .from-control input {
-    border: 2px solid indianred;
+    border: 2px solid gray;
     border-radius: 4px;
     display: block;
     width: 100%;
     padding: 10px;
     font-size: 11px;
+
+    
 }
 
 .from-control input:focus {
