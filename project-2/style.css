@@ -16,7 +16,9 @@ body {
 }
 
 .select_container {
-    margin: 20px 0;
+    margin: 10px 0;
+    
+
 }
 
 .select_container select {
@@ -29,6 +31,7 @@ body {
 }
 
 .seat {
+    
     background-color: #87BCDE;
     height: 15px;
     width: 15px;
@@ -70,12 +73,14 @@ body {
 }
 
 .legend {
+    
     background-color: rgba(0, 0, 0,1);
     padding:  5px 10px;
     border-radius: 5px;
     list-style-type: none;
     display: flex;
     justify-content:  space-around;
+    
 }
 
 .legend li {
@@ -87,15 +92,18 @@ body {
 
 .legend small {
     margin-left: 3px;
+    
 }
 
 .screen {
+    margin:  20px;
     background-color: white;
-    height: 90px;
-    width: 100%;
-    margin: 1px 0;
+    height: 100px;
+    width: 0%;
+    
     transform: rotateX(-45deg);
     box-shadow: 0 3px 10px rgba(255, 255,255, 0);
+    
     
 }
 
@@ -103,6 +111,7 @@ body {
     transform: rotateX(-45deg);
     margin-bottom: auto;
     margin: -50px;
+    
     align-items: center;
     margin-left: auto;
     margin-right: auto;
