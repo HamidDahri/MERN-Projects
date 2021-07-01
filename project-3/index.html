@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="progress.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Media player</title>
+</head>
+<body>
+    <h1>Video Player</h1>
+    <!-- video player -->
+    
+    <video src="videos/NO TIME TO DIE Trailer – In Cinemas October 2021..mp4" id="video" class="video" poster="pictures/no-time-to-die-poster_2_0.jpg"></video>
+<!-- custom video player -->
+   <div class="controls">
+       <!-- play button-->
+    <button class="btn" id="play">
+        <i class="fa fa-play fa-2x"></i>
+    </button>
+    <!-- stop button-->
+    <button class="btn" id="stop">
+        <i class="fa fa-stop fa-2x"></i>
+    </button>
+    <!-- Progress bar slider -->
+      <input type="range" name="" id="progress" class="progress" min="0" max="100" step="0.1" value="0">
+      <!-- Duration of video -->
+      <span class="time" id="time">00:00</span>
+
+   </div>
+    <script src="script.js" ></script>
+</body>
+</html>
