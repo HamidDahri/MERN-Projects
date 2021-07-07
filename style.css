@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    background-color: tomato    ;
+}
+
+
+h2 {
+    text-align: center;
+}
+
+ol li {
+    text-align:justify;
+    justify-items: center;
+    text-transform: capitalize;
+}
+div {
+    position: fixed;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    margin-top: 10%;
+    box-shadow: 0px 2px 10px wheat;
+    min-height: auto;
+    align-items: center;
+    width: 400px;
+    height: fit-content;
+    background-color:  whitesmoke;  
+    border-radius: 4px;
+    top: auto;
+    left: auto;
+    
+}
+
