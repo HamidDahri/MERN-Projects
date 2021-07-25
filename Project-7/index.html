@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- title -->
+    <h1> Hangman</h1>
+    <!--please use your keyboard to guess a letter and complete the hidden word -->
+    <!-- main game container -->
+    <div class="container">
+        <!-- hangman SVG -->
+     <svg class="hangman-container" height="250" width="200"> 
+       <line x1="60" y1="20" x2="140" y2="20"></line>
+       <line x1="140" y1="20" x2="140" y2="50"></line>
+       <line x1="60" y1="20" x2="60" y2="230"></line>
+       <line x1="20" y1="230" x2="100 " y2="230"></line>
+       <!-- hangman's head -->
+       <circle cx="140" cy="70" r="20" class="hangman-parts" ></circle>
+       <!-- hangman's core -->
+       <line x1="140" y1="90" x2="140" y2="150" class="hangman-parts"></line>
+       <!-- hangman's hands -->
+       <line x1="140" y1="100" x2="120" y2="140" class="hangman-parts"></line>
+       <line x1="140" y1="100" x2="160" y2="140" class="hangman-parts"></line>
+       <!-- hangman's legs -->
+       <line x1="140" y1="150" x2="120" y2="190" class="hangman-parts"></line>\
+       <line x1="140" y1="150" x2="160" y2="190" class="hangman-parts"></line>
+     </svg>
+     <!-- container for incorrect guesses -->
+     <div class="incorrect-guesses-container">
+         <!-- use js to add incorrect letters -->
+         <div id="incorrect-letters"></div>
+     </div>
+     <!-- this is the main word the player wants to guess -->
+     <div class="word" id="word">
+        
+     </div>
+    </div>
+    
+    <!-- gome over container -->
+    <div class="gameover-container" id="gameover-container">
+        <div class="popup" id="popup">
+            <!-- message to display when game is finished -->
+            <h2 id="gameover-message">Congrats you won</h2> 
+            <!-- button to restart the game -->
+            <button id="play-btn">Play Again</button>
+        </div>
+    </div>
+
+    <!-- notification container -->
+    <div class="notification-container" id="notification-container">
+        <p>you have already guesses this letter</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
