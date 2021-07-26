@@ -6,7 +6,7 @@ const gameovermsg = document.getElementById('gameover-message');
 const playbtn = document.getElementById('playbtn');
 const hangmanparts = document.querySelectorAll('.hangman-parts');
 const popup = document.getElementById('popup');
-const demobtn = document.getElementById('demobtn');
+
 console.log(popup);
 
 console.log(hangmanparts);
@@ -78,11 +78,6 @@ function displaynotification(){
     },1000)
 }
 
-demobtn.addEventListener('click', () => {
-    demobtn.innerText = 'hamid';
-})
-
-
 
 window.addEventListener('keydown',e => {
     if(e.keyCode >= 65 && e.keyCode <=90){
@@ -121,7 +116,7 @@ playbtn.addEventListener('click', () => {
      renderword();
      renderincorrectletters();
      gameoverelement.style.display = 'none';
-     playbtn.style.transform:active 
+     
 });
 
 function myFunction() {
