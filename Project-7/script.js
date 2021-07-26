@@ -3,14 +3,15 @@ const incorrectletterelement = document.getElementById('incorrect-letters');
 const notificationelement = document.getElementById('notification-container');
 const gameoverelement = document.getElementById('gameover-container');
 const gameovermsg = document.getElementById('gameover-message');
-const playbtn = document.getElementById('play-btn');
+const playbtn = document.getElementById('playbtn');
 const hangmanparts = document.querySelectorAll('.hangman-parts');
 const popup = document.getElementById('popup');
+const demobtn = document.getElementById('demobtn');
 console.log(popup);
 
 console.log(hangmanparts);
 console.log(gameoverelement);
-console.log(playbtn);
+
 
 const words = [
     'hamid','abdul','mobile','mouse',
@@ -42,7 +43,6 @@ function renderword(){
        //if the word matches the random word set the message to you won~!  
        gameovermsg.innerText = "You Won!";
        gameoverelement.style.display = 'flex';
-       playbtn.style.innerHTML = "hamid";
    }
 };
 
@@ -78,16 +78,11 @@ function displaynotification(){
     },1000)
 }
 
+demobtn.addEventListener('click', () => {
+    demobtn.innerText = 'hamid';
+})
 
 
-playbtn.addEventListener('click' , () => {
-    correctletters.splice(0);
-     incorrectletters.splice(0);
-     randomword = words[Math.floor(Math.random() * words.length)];
-     renderword();
-     renderincorrectletters();
-     gameoverelement.style.display = 'none';
-});
 
 window.addEventListener('keydown',e => {
     if(e.keyCode >= 65 && e.keyCode <=90){
@@ -118,5 +113,25 @@ window.addEventListener('keydown',e => {
     }
 
 })
+
+playbtn.addEventListener('click', () => {
+    correctletters.splice(0);
+     incorrectletters.splice(0);
+     randomword = words[Math.floor(Math.random() * words.length)];
+     renderword();
+     renderincorrectletters();
+     gameoverelement.style.display = 'none';
+     playbtn.style.transform:active 
+});
+
+function myFunction() {
+    document.getElementById("myCheck").click();
+    correctletters.splice(0);
+    incorrectletters.splice(0);
+    randomword = words[Math.floor(Math.random() * words.length)];
+    renderword();
+    renderincorrectletters();
+    gameoverelement.style.display = 'none';
+  }
 
 renderword();

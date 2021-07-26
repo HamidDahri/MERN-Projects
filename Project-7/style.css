@@ -103,9 +103,9 @@ background-color: rgb(38, 184, 62);
     margin: 0;
 }
 
-.popup button:active {
-    transform: scale(0,9);
-}
+ .popup button:active {
+    transform: scale(0.9);
+} 
 
 .hangman-container {
     fill:  transparent;
