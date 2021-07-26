@@ -5,10 +5,88 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page with Sliding Menu and Modal Window</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 <body>
-    <a href="../index.html">
-        <button class="home">Home</button>
-    </a>
+    <!-- left navigation -->
+   <nav>
+       <div class="logo">
+           <img src="https://randomuser.me/api/portraits/thumb/men/11.jpg" alt="user">
+       </div>
+       <ul>
+           <li><a href="#">Home</a></li>
+           <li><a href="#">Portfolio</a></li>
+           <li><a href="#">Blog</a></li>
+           <li><a href="#">Contact</a></li>
+       </ul>
+   </nav>
+   <!-- Header  -->
+   <header>
+       <button class="toggle" id="toggle">
+           <i class="fa fa-bars "></i>
+       </button>
+       <h1>My Landing Page</h1>
+       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque facilis cum soluta cumque suscipit laborum repellendus ipsa, fugiat consequatur hic itaque nisi doloremque voluptas veritatis adipisci quas. Ratione, deleniti amet?</p>
+       <button class="cta-btn" id="open">
+           Sign Up
+       </button>  
+    </header>
+
+    <!-- main content -->
+    <div class="container">
+        <h2>What is Engineering</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo deleniti est tenetur natus. Sapiente laborum debitis, aliquam omnis hic labore!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos, non.</p>
+        <h2>Learn More</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur corporis doloribus iste quam numquam velit? Repellendus, accusantium! Eos, veniam deserunt. Porro, nemo quod vero natus neque possimus debitis rem error?</p>
+
+
+        <h2>Projects</h2>
+        <ul>
+            <li>Project 1</li>
+            <li>Project 2</li>
+            <li>Project 3</li>
+            <li>Project 4</li>
+            <li>Project 5</li>
+        </ul>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum cumque impedit asperiores repellendus exercitationem odio adipisci, iure sit aperiam deleniti. Culpa vitae aperiam temporibus praesentium laudantium maiores quis sit totam, voluptates blanditiis veniam exercitationem dignissimos pariatur, optio veritatis odio ipsa doloribus quam corrupti, corporis quae. Aspernatur aliquam non quia.</p>
+    <!-- modal -->
+    <div class="modal-container" id="modal">
+        <div class="modal">
+            <button class="close-btn" id="close">
+                <i class="fa fa-times"></i>
+            </button>
+            <div class="modal-header">
+                <h3>Sign Up</h3>
+            </div>
+            <div class="modal-content">
+                <p>Register for classes</p>
+                <form class="modal-form">
+                    <div>
+                        <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="Enter Name"/>
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Enter Your Email Address"/>
+                    </div>
+                    <div>
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Enter Password"/>
+                    </div>
+                    <div>
+                        <label for="password1">Name</label>
+                        <input type="password" id="password1" placeholder="Enter Confirm Password"/>
+                    </div>
+                    <input type="submit" value="submit" class="submit-btn">
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
